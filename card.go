@@ -4,6 +4,7 @@ package deck
 
 import "fmt"
 
+// Suit is a set of all suits available in a normal deck of cards
 type Suit uint8
 
 const (
@@ -11,9 +12,12 @@ const (
 	Diamond
 	Club
 	Heart
-	Joker
+	Joker // Special
 )
 
+var suits = [...]Suit{Spade, Diamond, Club, Heart}
+
+// Rank is a set of all ranks possible
 type Rank uint8
 
 const (
@@ -33,6 +37,7 @@ const (
 	King
 )
 
+// Card is a set of Suit and Rank
 type Card struct {
 	Suit
 	Rank
@@ -43,4 +48,14 @@ func (c Card) String() string {
 		return c.Suit.String()
 	}
 	return fmt.Sprintf("%s of %ss", c.Rank.String(), c.Suit.String())
+}
+
+// Deck is a slice of cards
+type Deck []Card
+
+func New() []Card {
+	var cards []Card
+	// for each suit
+	// for each rank
+	// add card{suit rank}
 }
