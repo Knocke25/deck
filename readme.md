@@ -1,0 +1,1 @@
+Requires download of: Stringer (run: go get golang.org/x/tools/cmd/stringer)
