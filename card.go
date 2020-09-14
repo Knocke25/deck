@@ -37,6 +37,11 @@ const (
 	King
 )
 
+cost (
+	minRank = Ace
+	maxRank = King
+)
+
 // Card is a set of Suit and Rank
 type Card struct {
 	Suit
