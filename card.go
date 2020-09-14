@@ -58,9 +58,16 @@ func (c Card) String() string {
 // Deck is a slice of cards
 type Deck []Card
 
+// New creates a new deck of 52 cards
 func New() []Card {
 	var cards []Card
-	// for each suit
+	for _, suit := range suits {
+		for rank := minRank; rank <= maxRank; rank++ {
+			cards = append(cards, Card{Suit: suit, Rank: rank})
+		}
+
+	}
 	// for each rank
 	// add card{suit rank}
+	return cards
 }
