@@ -37,7 +37,7 @@ const (
 	King
 )
 
-cost (
+const (
 	minRank = Ace
 	maxRank = King
 )
